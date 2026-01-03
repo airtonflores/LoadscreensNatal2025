@@ -27,8 +27,6 @@ public class DialogueControll : MonoBehaviour
     public Volume globalVolume;
     private Vignette vignette;
 
-    public TimerController meuTimer;
-
     void Start()
     {
         if (globalVolume != null)
@@ -52,7 +50,7 @@ public class DialogueControll : MonoBehaviour
 
 
         vignette.smoothness.value = 0.137f;
-        meuTimer.timerIsRunning = true;
+        scriptDoTimer.timerIsRunning = true;
 
         Dialoguebox.SetActive(true);
         yield return new WaitForSeconds(1);
@@ -126,4 +124,5 @@ public class DialogueControll : MonoBehaviour
         StartCoroutine(DialogueBlok());
         yield return null;
     }
+
 }
